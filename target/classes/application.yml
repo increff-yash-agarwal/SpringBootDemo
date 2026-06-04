@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: demo
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/pos_demo
+      
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
