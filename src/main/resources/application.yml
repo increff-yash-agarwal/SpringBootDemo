@@ -1,10 +1,19 @@
 spring:
   application:
-    name: demo
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/pos_demo
-      
+    name: pos-demo
+  datasource:
+    url: jdbc:mysql://gateway01.ap-southeast-1.prod.aws.tidbcloud.com:4000/pos_demo?sslMode=VERIFY_IDENTITY
+    username: i61VdwNre3VMCtW.root
+    password: n9zkUf59P2KuzGTy
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+pos:
+  supervisors: supervisor1@example.com,supervisor2@example.com
+
 springdoc:
   api-docs:
     path: /api-docs
