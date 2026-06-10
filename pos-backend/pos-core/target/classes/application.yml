@@ -4,7 +4,7 @@ spring:
 
   # --- TiDB Database Target (MySQL Driver Engine Wrapper) ---
   datasource:
-    url: jdbc:mysql://localhost:4000/pos_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://127.0.0.1:4000/test?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
     password: ""
     driver-class-name: com.mysql.cj.jdbc.Driver
