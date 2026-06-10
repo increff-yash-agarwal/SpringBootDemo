@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: pos-core
+
+  # --- TiDB Database Target (MySQL Driver Engine Wrapper) ---
+  datasource:
+    url: jdbc:mysql://localhost:4000/pos_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: ""
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # --- JPA & Query Schema Strategy ---
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        # --- MANDATORY RULE: SAVE ALL TIMESTAMPS AS UTC INSIDE THE DATABASE ---
+        jdbc:
+          time_zone: UTC
+
+# --- Server Port Setup ---
+server:
+  port: 8080
+
+# --- Logging Configurations ---
+logging:
+  level:
+    org.springframework.web: INFO
