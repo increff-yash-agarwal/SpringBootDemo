@@ -29,3 +29,15 @@ server:
 logging:
   level:
     org.springframework.web: INFO
+app:
+  security:
+    # Comma-separated list of absolute supervisor emails
+    supervisors: "supervisor@increff.com,admin@increff.com,manager@increff.com"
+# --- Springdoc OpenAPI / Swagger UI Custom Settings ---
+springdoc:
+  api-docs:
+    path: /api-docs      # Custom path for raw JSON openapi spec definitions
+  swagger-ui:
+    path: /swagger-ui.html   # User-facing landing target route
+    operations-sorter: alpha # Sorts routes alphabetically by method type
+    tags-sorter: alpha       # Sorts controllers alphabetically
